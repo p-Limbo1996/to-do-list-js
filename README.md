@@ -23,14 +23,26 @@ To set up and run the app locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/username/todo-list-app.git ```
-   
-   Navigate to the project directory:
-   cd todo-list-app
-   Open the app: Simply open index.html in your web browser
+   git clone https://github.com/username/todo-list-app.git
+   ```
 
-   ##🌟 Features
-✅ Add, edit, and delete to-do items
-🗂️ Mark items as completed
-📱 Responsive design using CSS
-💾 Local storage support for persistence
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd todo-list-app
+   ```
+
+3. **Open the app:**
+
+   Simply open `index.html` in your web browser.
+
+## 🌟 **Features**
+
+- ✅ Add, edit, and delete to-do items
+- 🗂️ Mark items as completed
+- 📱 Responsive design using CSS
+- 💾 Local storage support for persistence
+
+## 👨‍💻 **Developer**
+
+Created by [p-Limbo1996 ](https://github.com/p-Limbo1996).
