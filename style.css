@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #7c0f75, #3232c2);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  color: #363636;
+  width: 800px;
+  background-color: #a06bd5;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.date {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.timer {
+  display: flex;
+  color: #363636;
+  font-size: 15px;
+  font-weight: 600;
+}
+.timer p{
+  margin: 2px 10px;
+  font-size: 12px;
+}
+.icon {
+  margin-right: 5px;
+  margin-top: -5px;
+  color: #7c0f7577;
+  /* text-decoration: wavy; */
+}
+
+.to-do {
+  display: flex;
+  border-radius: 10px;
+  margin: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  height: 50px;
+  background-color: #c9c5c5;
+}
+
+.to-do input {
+  background-color: #c9c5c5;
+  color: #5b5757;
+  padding: 10px 40px;
+  flex: 1;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.to-do button {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 20%;
+  font-size: 20px;
+  background-color: #7c0f75;
+  color: #fff;
+  padding: 15px 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50% 3px 3px 50%;
+  transition: 0.3s;
+}
+.to-do button:hover {
+  background-color: #4c39a3;
+  scale: 1.03;
+}
+.task-list {
+  color: #fff;
+  
+  list-style: none;
+}
+
+.task-list li::before {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  content: "⬜";
+  opacity: 0.75;
+  color: #ababab;
+  width: 20px;
+  height: 10px;
+}
+
+.task-list li {
+  position: relative;
+  font-size: 1.5rem;
+  background-color: #3232c295;
+  padding: 10px 50px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  color: #e7e5e5;
+  transition: 0.3s;
+}
+
+.task-list li.done::before {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  content: "✅";
+  opacity: 0.5;
+  color: #ababab;
+  width: 20px;
+  height: 10px;
+}
+.task-list li.done {
+  background-color: #3232c24f;
+  color: #ababab;
+  /* scale: 1.05; */
+  text-decoration: line-through #ffffff9e;
+}
+
+.task-list li:hover {
+  scale: 1.05;
+  background-color: #7c0f75;
+  cursor: pointer;
+  user-select: none;
+}
+.close-btn {
+  width: 200px;
+  height: 200px;
+  background-color: #a70101;
+}
+.content {
+  min-height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 40px;
+  margin: 10px;
+  width: 800px;
+  background-color: #a06bd5;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+#icon {
+  display: none;
+  color: #bbb8b8;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  scale: 1.05;
+  cursor: pointer;
+  user-select: none;
+}
+#icon:hover {
+  color: #fff;
+}
+.task-list li:hover #icon {
+  display: block;
+}
+
+ /* pop-up */
+.popup {
+  visibility: hidden;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  background:linear-gradient(10deg ,#6475bb,#1e3281) ;
+  border-radius: 10px;
+  transition: transform 0.4s, top 0.4s ;
+}
+.pop-up {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  
+}
+
+.popup img {
+  margin: -50px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.popup p {
+  color: #d7d6d6;
+  padding: 20px 0px;
+  margin: 80px 50px;
+  font-size: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  left: 10%;
+  margin-bottom: 20px;
+  bottom: 10px;
+  width: 80%;
+  height: 20%;
+  background-color: #4c39a3bc;
+  color: #c2c0c0;
+  padding: 12px 50px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+} 
+.close-btn:hover{
+  background-color: #4c39a3ed;
+  color: #ffffff;
+}

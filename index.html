@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <title>to-do list</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="date">
+          <div class="timer" >
+            <span class="material-symbols-outlined , icon">calendar_month</span>
+            <div id="date">00 - 0000</div> 
+          </div>
+          <h2>
+            <span class="material-symbols-outlined">event_list</span>
+            My To-Do List
+            <span style="rotate: 180deg" class="material-symbols-outlined"
+              >event_list</span>
+          </h2>
+          <div class="timer">
+            <span class="material-symbols-outlined , icon"> schedule </span>
+            <div id="time">00:00:00</div><p id="txt" ></p>
+          </div>
+        </div>
+        <div class="to-do">
+          <input
+            id="text"
+            type="text"
+            placeholder=" input your text ..."
+            autocomplete="off"
+          />
+          <button id="btn">add</button>
+        </div>
+      </div>
+      <div class="content">
+        <ul class="task-list" id="task">
+          <!-- <li>
+            study
+            <span id="icon" class="material-symbols-outlined">
+              delete_forever
+              
+              </span>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  
+    <!-- popUp -->
+    <div class="popup" id="pop-up">
+      <img src="image/demax Icon 15.png" />
+      <p>please enter some text in the input-box...!</p>
+    
+      <button type="button" class="close-btn" id="close">ok</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="javaScript.js"></script>
+  </body>
+</html>
