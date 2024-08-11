@@ -23,10 +23,10 @@ To set up and run the app locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/username/todo-list-app.git
+   git clone https://github.com/username/todo-list-app.git ```
    
    Navigate to the project directory:
-   ```cd todo-list-app```
+   cd todo-list-app
    Open the app: Simply open index.html in your web browser
 
    ##🌟 Features
